@@ -1,0 +1,31 @@
+<div class="container container-register mx-auto d-flex align-items-center">
+  <form class="form-custom-register p-5 border bg-light d-flex flex-column" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h2 class="text-center mb-3">Bienvenido</h2>
+    <p class="text-center mb-5">Registrate gratis!</p>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName">
+      <small *ngIf="registerForm.controls['firstName'].invalid && registerForm.controls['firstName'].touched" class="text-danger">Nombre es requerido.</small>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      <small *ngIf="registerForm.controls['lastName'].invalid && registerForm.controls['lastName'].touched" class="text-danger">Apellido es requerido.</small>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Teléfono</label>
+      <input type="text" class="form-control" id="phone" formControlName="phone">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <small *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched" class="text-danger">Email es requerido y debe ser válido.</small>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+      <small *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched" class="text-danger">La contraseña debe tener entre 6 y 10 caracteres.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Enviar</button>
+  </form>
+</div>

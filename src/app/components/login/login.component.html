@@ -1,0 +1,16 @@
+<div class="container container-login mx-auto d-flex align-items-center">
+<form class="form-custom-login p-5 border bg-light d-flex flex-column">
+  <h2 class="text-center mb-5">Bienvenido</h2>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email">
+    <small *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" class="text-danger">Email es requerido y debe ser válido.</small>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" formControlName="password">
+    <small *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="text-danger">La contraseña es requerida.</small>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Ingresar</button>
+</form>
+</div>

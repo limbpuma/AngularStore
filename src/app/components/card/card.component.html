@@ -1,0 +1,12 @@
+<div class="card text-center p-3 mb-5">
+  <img [src]="image" class="card-img-top card-product-image" alt="product" />
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ text }}</p>
+    <h6 class="card-subtitle mb-2 text-muted">{{ price | currency }}</h6>
+    <p class="card-text">
+      <a [routerLink]="['/product-details', productId]">{{ detail }}</a>
+    </p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+</div>
