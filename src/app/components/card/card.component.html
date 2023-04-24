@@ -1,12 +1,14 @@
-<div class="card text-center p-3 mb-5">
-  <img [src]="image" class="card-img-top card-product-image" alt="product" />
+<div class="card text-center">
+  <img [src]="producto.thumbnail" class="card-img-top card-product-image" alt="product" />
   <div class="card-body">
-    <h5 class="card-title">{{ title }}</h5>
-    <p class="card-text">{{ text }}</p>
-    <h6 class="card-subtitle mb-2 text-muted">{{ price | currency }}</h6>
+      <h5 class="card-title">{{ producto.title }}</h5>
+    <p class="card-text">{{ producto.condition }}</p>
+    <h6 class="card-subtitle mb-2 text-muted">Precio: {{ producto.price }}</h6>
     <p class="card-text">
-      <a [routerLink]="['/product-details', productId]">{{ detail }}</a>
+      <a [routerLink]="['/product-details']">{{ producto.id }}</a>
     </p>
-    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-primary mx-1">Comprar</button>
+    <button class="btn btn-secondary" [routerLink]="['/detalle', producto.id]">Detalles</button>
   </div>
 </div>
+

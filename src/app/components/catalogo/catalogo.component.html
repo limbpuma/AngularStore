@@ -1,176 +1,20 @@
 <section
-class="hero-section-catalogo mb-5"
-style="background-image: url('../assets/hero.jpg')">>
-<div class="container-hero">
-  <div class="row d-flex justify-content-center">
-    <div class="col-lg-8 text-center">
-      <h2 class="hero-heading">Aprovecha nuestros descuentos</h2>
-      <p class="hero-subheading">Catalodo exclusivo</p>
+  class="hero-section-catalogo mb-5"
+  style="background-image: url('../assets/hero.jpg')">
+  <div class="container-hero">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="hero-heading">Aprovecha nuestros descuentos</h2>
+        <p class="hero-subheading">Catalodo exclusivo</p>
+      </div>
     </div>
   </div>
-</div>
 </section>
-<div class="container row d-flex mx-auto">
+<div class="container">
   <div class="row d-flex justify-content-space-around mx-auto p-5">
-    <div class="col-md-3">
-      <app-card
-        title="Card 1"
-        text="This is a sample card"
-        price="10"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 2"
-        text="This is another sample card"
-        price="20"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 3"
-        text="This is a third sample card"
-        price="30"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 4"
-        text="This is a fourth sample card"
-        price="40"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 1"
-        text="This is a sample card"
-        price="10"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 2"
-        text="This is another sample card"
-        price="20"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 3"
-        text="This is a third sample card"
-        price="30"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 4"
-        text="This is a fourth sample card"
-        price="40"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 1"
-        text="This is a sample card"
-        price="10"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 2"
-        text="This is another sample card"
-        price="20"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 3"
-        text="This is a third sample card"
-        price="30"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 4"
-        text="This is a fourth sample card"
-        price="40"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 1"
-        text="This is a sample card"
-        price="10"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 2"
-        text="This is another sample card"
-        price="20"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 3"
-        text="This is a third sample card"
-        price="30"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 4"
-        text="This is a fourth sample card"
-        price="40"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 1"
-        text="This is a sample card"
-        price="10"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 2"
-        text="This is another sample card"
-        price="20"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 3"
-        text="This is a third sample card"
-        price="30"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 4"
-        text="This is a fourth sample card"
-        price="40"
-        detail = "detalle"
-      ></app-card>
+    <!-- Usa col-6 para 2 columnas en pantallas pequeñas, col-md-4 para 3 columnas en pantallas medianas y col-lg-3 para 4 columnas en pantallas grandes -->
+    <div class="col-6 col-md-4 col-lg-3 mb-5" *ngFor="let producto of productos">
+      <app-card [producto]="producto"></app-card>
     </div>
   </div>
 </div>

@@ -1,1 +1,24 @@
-<p>detalle works!</p>
+<div *ngIf="producto" class="container">
+  <div class="detalle-producto">
+    <img
+      [src]="producto.thumbnail"
+      class="card-img-top card-product-image"
+      alt="product"
+    />
+    <div class="card-body text-center">
+      <h2>{{ producto.title }}</h2>
+      <p class="card-text">{{ producto.condition }}</p>
+      <p>{{ producto.description }}</p>
+      <p>{{ descripcion }}</p>
+      <h6 class="card-subtitle mb-2 text-muted">
+        Precio: {{ producto.price }}
+      </h6>
+      <p class="card-text">
+        <a [routerLink]="['/product-details']">{{ producto.id }}</a>
+      </p>
+      <button class="btn btn-primary mx-1">Comprar</button>
+    </div>
+  </div>
+</div>
+
+<!--{description.plain_text}-->

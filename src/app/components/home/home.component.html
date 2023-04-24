@@ -65,41 +65,13 @@
 </div>
 <!--Card home-->
 <!--Card Products-->
-<div class="container row d-flex mx-auto">
-  <h2 class="text-center p-3 mt-5" >Productos</h2>
-  <div class="row d-flex justify-content-space-around mx-auto">
-    <div class="col-md-3">
-      <app-card
-        title="Card 1"
-        text="This is a sample card"
-        price="10"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 2"
-        text="This is another sample card"
-        price="20"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 3"
-        text="This is a third sample card"
-        price="30"
-        detail = "detalle"
-      ></app-card>
-    </div>
-    <div class="col-md-3">
-      <app-card
-        title="Card 4"
-        text="This is a fourth sample card"
-        price="40"
-        detail = "detalle"
-      ></app-card>
+<div class="container">
+  <h2 class="text-center p-2 mt-5 mb-5">Productos</h2>
+  <div class="row">
+    <div class="col-md-3 mb-5" *ngFor="let producto of productos">
+      <app-card [producto]="producto"></app-card>
     </div>
   </div>
 </div>
+
 <!--Card Products-->
