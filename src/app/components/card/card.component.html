@@ -3,7 +3,7 @@
   <div class="card-body">
       <h5 class="card-title">{{ producto.title }}</h5>
     <p class="card-text">{{ producto.condition }}</p>
-    <h6 class="card-subtitle mb-2 text-muted">Precio: {{ producto.price }}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{ producto.price | currency:'USD' }}</h6>
     <p class="card-text">
       <a [routerLink]="['/product-details']">{{ producto.id }}</a>
     </p>
